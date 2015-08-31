@@ -1,0 +1,10 @@
+{
+  "name": "jquery-maps-geocode",
+  "description": "A jQuery Function to get and filter data from Google Maps Geocode..",
+  "version": "1.13.4",
+  "keywords": ["maps","geocode","jquery-plugin"],
+  "scripts": [
+    "dist/jquery.maps-geocode.js"
+  ],
+  "main": "dist/jquery.maps-geocode.js"
+}

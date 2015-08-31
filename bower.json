@@ -1,0 +1,8 @@
+{
+  "name": "jquery-maps-geocode",
+  "version": "1.0",
+  "main": "dist/jquery.maps-geocode.js",
+  "ignore": [
+    ".*"
+  ]
+}
