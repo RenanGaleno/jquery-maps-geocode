@@ -1,6 +1,6 @@
 /**
  * jquery.maps-geocode.js
- * @version: v1.0;2
+ * @version: v1.0.3
  * @author: Renan Galeno
  *
  */
@@ -13,6 +13,7 @@ function getAddress(address){
   var cidade = '';
   var bairro = '';
   var logradouro = '';
+  var numero = '';
   $.ajax({
     dataType: 'json',
     async: false,
@@ -22,7 +23,7 @@ function getAddress(address){
       locais = results.results;
       i = 0;
       for (var j = locais[i].address_components.length - 1; j>=0; j--){
-        if(locais[i].address_components[j].types[0] == "postal_code")
+        if(locais[i].address_components[j].types[0] == "postal_code" || locais[i].address_components[j].types[1] == "postal_code")
           cep = locais[i].address_components[j].long_name;
         if(locais[i].address_components[j].types[0] == "country"){
           pais = locais[i].address_components[j].long_name;
@@ -38,6 +39,8 @@ function getAddress(address){
           bairro = locais[i].address_components[j].long_name;
         if(locais[i].address_components[j].types[0] == "route")
           logradouro = locais[i].address_components[j].long_name;
+        if(locais[i].address_components[j].types[0] == "street_number")
+          numero = locais[i].address_components[j].long_name;
       }
   }});
   var result = {
@@ -49,6 +52,7 @@ function getAddress(address){
     "cidade": cidade,
     "bairro": bairro,
     "logradouro": logradouro,
+    "numero": numero,
   }
   return result;
 }
