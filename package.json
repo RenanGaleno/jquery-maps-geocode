@@ -1,6 +1,6 @@
 {
   "name": "jquery-maps-geocode",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A jQuery Function to get and filter data from Google Maps Geocode.",
   "author": "Renan Galeno <g@renan.eng.br>",
   "homepage": "http://renangaleno.github.io/jQuery-Maps-Geocode",

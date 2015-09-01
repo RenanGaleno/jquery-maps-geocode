@@ -1,6 +1,6 @@
 /**
  * jquery.maps-geocode.js
- * @version: v1.0
+ * @version: v1.0;2
  * @author: Renan Galeno
  *
  */
@@ -16,7 +16,7 @@ function getAddress(address){
   $.ajax({
     dataType: 'json',
     async: false,
-    url: 'http://maps.google.com/maps/api/geocode/json?address='+address+'&sensor=false',
+    url: 'https://maps.google.com/maps/api/geocode/json?address='+address+'&sensor=false',
     type: 'GET',
     success:function(results){
       locais = results.results;
